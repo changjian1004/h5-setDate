@@ -1,0 +1,80 @@
+body,p{margin: 0;}   
+.timeModule{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background: rgba( 0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.timeModule .timeMain{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    transition: transform 0.5s;
+    transform: translateY(100%);
+}
+.timeModule .timeMain .timeBtn{
+    height: 40px;
+    line-height: 40px;
+    background-color: #e6e6e6;
+    padding: 0 10px;
+}
+.timeModule .timeMain .timeBtn a{
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+}
+.timeModule .timeMain .timeBtn a.timeYes{
+    float: right;
+}
+.timeModule .timeMain .timeList{
+    overflow: hidden;
+    height: 150px;
+    display: flex;
+    margin: 20px 0;
+    position: relative;
+}
+.timeModule .timeMain .timeList::before,
+.timeModule .timeMain .timeList::after{
+    content: '';
+    background: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 1;
+}
+.timeModule .timeMain .timeList::before{
+    top: 0;
+    border-bottom: 1px solid #ccc;
+}
+.timeModule .timeMain .timeList::after{
+    bottom: 0;
+    border-top: 1px solid #ccc;
+}
+.timeModule .timeMain .timeList .box{
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+}
+.timeModule .timeMain .timeList ul{
+    padding: 0;
+    margin: 0;
+    /* transition: transform 0.1s; */
+    transform: translateY(0);
+}
+.timeModule .timeMain .timeList ul li{
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
